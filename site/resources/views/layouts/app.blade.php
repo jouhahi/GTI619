@@ -50,6 +50,11 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/') }}">Accueil</a></li>
+
+                     @if (!Auth::guest())
+                        <li><a href="{{ url('Administrateur') }}">Administrateur</a></li>
+                    @endif
+                        
                 </ul>
 
                 <!-- Right Side Of Navbar -->
